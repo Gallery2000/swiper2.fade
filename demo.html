@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>fade使用Demo</title>
     <link rel="stylesheet" href="./swiper2/idangerous.swiper.css">
-    <link rel="stylesheet" href="./swiper.fade/swiper.fade.css">
+    <link rel="stylesheet" href="./swiper.fade.plugin/swiper.fade.plugin.css">
     <link rel="stylesheet" href="./animate.min.css">
     <style>
         .swiper-container {
@@ -38,19 +38,13 @@
             </div>
         </div>
     <script src="./swiper2/idangerous.swiper2.7.6.js"></script>
-    <script src="./swiper.fade/swiper.fade.js"></script>
-    <script src="./swiper.animate1.0.3.min.js"></script>
+    <script src="./swiper.fade.plugin/swiper.fade.plugin.js"></script>
+    <script src="./swiper.animate.plugin/swiper.animate.plugin.js"></script>
     <script language="javascript"> 
         var mySwiper = new Swiper('.swiper-container',{   
             fade: true,
             // loop: true,
-            onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
-                swiperAnimateCache(swiper); //隐藏动画元素 
-                swiperAnimate(swiper); //初始化完成开始动画
-            }, 
-            onSlideChangeEnd: function(swiper){ 
-                swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
-            }
+            animate:true, // 修改于swiper.animate插件，因此不支持loop模式
         });  
     </script>
 </body>
