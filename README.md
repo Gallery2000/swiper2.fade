@@ -1,7 +1,7 @@
 # swiper2.fade.plugin
-基于swiper2实现的fade切换插件
+基于swiper2实现的fade切换插件<br>
 开发背景：
-因为swiper3并不兼容IE8，而swiper2能够兼容IE8，但是在swiper下，当时我并没有找到有实现fade效果的插件，因此，就自己动手造了一个，使用非常简单：
+因为swiper3并不兼容IE8，而swiper2能够兼容IE8，但是在swiper2下，当时我并没有找到有实现fade效果的插件，因此，就自己动手造了一个，使用非常简单：
 ```javascript
 var mySwiper = new Swiper('.swiper-container',{   
     fade: true,
