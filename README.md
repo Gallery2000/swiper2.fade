@@ -5,7 +5,7 @@
 ```javascript
 var mySwiper = new Swiper('.swiper-container',{   
     fade: true,
-}
+});
 ```
 也可以配合animate插件一起使用，可以看我的案例展示
 ```javascript
