@@ -14,19 +14,6 @@ Swiper.prototype.plugins.fade = function(swiper,params) {
 			params[prop] = defaults[prop]	
 		}
 	}
-	function checkTransForm() {
-		'use strict';
-		var el = document.body;
-		var es = el.style;
-		var transform = ['webkitTransform','MsTransform','msTransform','MozTransform','OTransform','transform'];
-        for(var i=0; i<transform.length; i++ ){
-			var checkItem = transform[i];
-			if (es[checkItem] !== undefined) {
-				return checkItem;
-			}
-		}
-		return false;
-	}
     function init() {
 		initialized = true;
 		slides = swiper.slides
@@ -54,7 +41,7 @@ Swiper.prototype.plugins.fade = function(swiper,params) {
 		for (var i=0; i<swiper.slides.length; i++) {
 			var translateY = isH ? 0 : -transform.y
 			var translateX = isH ? -transform.x : 0;
-			if (checkTransForm()) {
+			if (swiper.support.transforms) {
 				var slideTransform = 'translate3d('+translateX+'px,'+translateY+'px,'+0+'px)';
 				swiper.setTransform(swiper.slides[i], slideTransform);
 			} else {
